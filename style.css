@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top {
+  flex-grow: 1;
+  background-color: #517596;
+
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #8ab0ab;
+}
+
+.middle {
+  flex-grow: 10;
+  background-color: #202124;
+}
+
+.footer {
+  flex-grow: 2;
+  background-color: #202124; /*#3e505b*/
+}
