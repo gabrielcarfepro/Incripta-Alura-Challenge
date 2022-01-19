@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+  font-family: 'Open Sans', sans-serif;
+}
+
 html,
 body {
   height: 100vh;
@@ -14,7 +21,7 @@ body {
 
 .top {
   flex-grow: 1;
-  background-color: #517596;
+  background-color: #00a388;
 
   border-bottom-style: solid;
   border-bottom-width: 2px;
@@ -46,6 +53,7 @@ body {
 
   text-align: center;
   left: 50%;
+  top: 100px;
   font-family: 'Roboto', sans-serif;
   color: white;
 }
@@ -96,7 +104,11 @@ h2 {
 
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  color: #202124;
+  color: white;
+  background-color: #00a388;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
 
   width: 300px;
   height: 300px;
@@ -133,6 +145,7 @@ h2 {
 
 .buttonSpace {
   position: relative;
+  top: 0;
   height: 3rem;
   width: 66.3rem;
   /*background-color: lawngreen;*/
@@ -143,11 +156,33 @@ h2 {
   left: 1.8rem;
   width: 10rem;
   height: 2.4rem;
+
+  color: white;
+  background-color: transparent;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
 }
 
 .buttons {
   width: 100px;
   height: 2.3rem;
+
+  color: white;
+  background-color: transparent;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
 }
 
 #copy {
@@ -159,4 +194,5 @@ h2 {
 .footer {
   flex-grow: 2;
   background-color: #202124; /*#03120e #3e505b*/
+  background-color: #3064ff; /*#03120e #3e505b*/
 }

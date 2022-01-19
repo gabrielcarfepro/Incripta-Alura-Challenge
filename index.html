@@ -27,30 +27,53 @@
           <div class="textSpace">
             <textarea
               name=""
-              id=""
+              id="texto"
               cols="30"
               rows="10"
               class="textArea"
+              title="Caixa de entrada de texto para criptografia ou decriptografia"
             ></textarea>
             <img id="lock" src="img/lock.svg" />
             <textarea
               name=""
-              id=""
+              id="resultado"
               cols="30"
               rows="10"
               class="textArea"
+              title="Caixa de saida do texto criptografado ou decriptografado"
             ></textarea>
             <img id="dataLine" src="img/dataLine.svg" />
             <img id="dataLine2" src="img/dataLine2.svg" />
           </div>
           <div class="buttonSpace">
-            <input type="button" class="leftButtons" value="Criptografar" />
-            <input type="button" class="leftButtons" value="Descriptografar" />
-            <input type="button" class="buttons" id="copy" value="Copiar" />
+            <input
+              type="button"
+              class="leftButtons"
+              value="Criptografar"
+              onclick="cript()"
+            />
+            <input
+              type="button"
+              class="leftButtons"
+              value="Descriptografar"
+              onclick="decript()"
+            />
+            <input
+              type="button"
+              class="buttons"
+              id="copy"
+              value="Copiar"
+              onclick="copy()"
+            />
           </div>
         </div>
       </div>
-      <div class="footer"></div>
+      <footer class="footer">
+        <div class="dev">
+          <spam>@GabrielFerreira</spam>
+        </div>
+      </footer>
     </main>
   </body>
+  <script type="text/javascript" src="script.js"></script>
 </html>
