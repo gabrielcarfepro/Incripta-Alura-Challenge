@@ -1,3 +1,7 @@
+function startCript() {
+  animar()
+}
+
 function cript() {
   let texto = document.querySelector('#texto')
   let resultado = document.querySelector('#resultado')
@@ -34,7 +38,6 @@ function copy() {
   let copyText = document.querySelector('#resultado')
   copyText.select()
   document.execCommand('copy')
-  alert('Texto copiado')
 }
 
 function transformate(input, output) {
@@ -49,4 +52,18 @@ function transformate(input, output) {
 
 // CONSUMINDO API DO GITHUB
 
-let urlApi = 'https://api.github.com/users/'
+let urlApi = 'https://api.github.com/users/gabrielcarfepro'
+
+function getGitHubAPI() {
+  fetch(urlApi)
+    .then(response => response.json())
+    .then(data => {
+      devName.textContent = data.name
+      //userBio.textContent = data.bio
+      //devPhoto.src = data.avatar_url
+      //githubUserUrl.href = data.html_url
+      githubUserName.textContent = data.login
+    })
+}
+
+getGitHubAPI()

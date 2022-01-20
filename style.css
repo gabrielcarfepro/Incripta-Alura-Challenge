@@ -43,12 +43,26 @@ body {
   position: relative;
 
   width: 400px;
+  height: 200px;
   left: 10%;
   top: 6%;
+  animation: floatAnimate 3s ease-in-out forwards infinite;
+}
+
+@keyframes floatAnimate {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: -30px;
+  }
+  100% {
+    margin-top: 0px;
+  }
 }
 
 .titlesFormat {
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
   position: relative;
 
   text-align: center;
@@ -105,7 +119,7 @@ h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: white;
-  background-color: #00a388;
+  background-color: #30ffdd; /*00a388*/
   border-color: white;
   border-style: solid;
   border-width: 1px;
@@ -133,6 +147,7 @@ h2 {
   width: 150px;
   left: 31%;
   top: 47%;
+  display: none;
 }
 
 #dataLine2 {
@@ -141,6 +156,40 @@ h2 {
   width: 150px;
   right: 31%;
   top: 15%;
+  display: none;
+}
+
+.dataSvg {
+  position: fixed;
+
+  width: 150px;
+  left: 31%;
+  top: 47%;
+}
+
+.dataSvg2 {
+  position: fixed;
+
+  width: 150px;
+  right: 31%;
+  top: 15%;
+}
+
+.animate {
+  stroke: #202124;
+  stroke-width: 2px;
+  stroke-dashoffset: 10;
+  stroke-dasharray: 12;
+  animation: svganimation 5s linear forwards;
+}
+
+@keyframes svganimation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 800;
+  }
 }
 
 .buttonSpace {
@@ -158,13 +207,14 @@ h2 {
   height: 2.4rem;
 
   color: white;
-  background-color: transparent;
+  background-color: #00a388;
 
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 20px;
 
   border-radius: 6px;
+  border-style: hidden;
 
   cursor: pointer;
 }
@@ -174,13 +224,14 @@ h2 {
   height: 2.3rem;
 
   color: white;
-  background-color: transparent;
+  background-color: #00a388;
 
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 26px;
 
   border-radius: 6px;
+  border-style: hidden;
 
   cursor: pointer;
 }
@@ -192,7 +243,27 @@ h2 {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
   flex-grow: 2;
   background-color: #202124; /*#03120e #3e505b*/
-  background-color: #3064ff; /*#03120e #3e505b*/
+  /*background-color: #3064ff; /*#03120e #3e505b*/
+}
+
+.dev {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 10px;
+
+  align-self: center;
+  text-align: center;
+  top: 50%;
+
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
