@@ -8,7 +8,6 @@
 html,
 body {
   min-height: 100vh;
-
   margin: 0;
   scroll-behavior: smooth;
   background-color: #202124;
@@ -181,24 +180,6 @@ h2 {
   width: 200px;
 
   z-index: 1;
-}
-
-#dataLine {
-  position: fixed;
-
-  width: 150px;
-  left: 31%;
-  top: 47%;
-  display: none;
-}
-
-#dataLine2 {
-  position: fixed;
-
-  width: 150px;
-  right: 31%;
-  top: 15%;
-  display: none;
 }
 
 .dataSvg {

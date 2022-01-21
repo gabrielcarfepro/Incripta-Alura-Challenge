@@ -1,0 +1,74 @@
+@media (max-width: 500px) {
+  .mainContent {
+    align-items: stretch;
+  }
+
+  .textSpace {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+    bottom: 15%;
+    justify-content: space-between;
+    width: 300px;
+    height: 62.5rem;
+  }
+
+  .textArea {
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  #lock {
+    width: 150px;
+    align-self: center;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  .dataSvg {
+    width: 100px;
+    left: 55%;
+    top: 60%;
+    transform: rotate(80deg);
+  }
+
+  .dataSvg2 {
+    width: 100px;
+    left: 35%;
+    top: 30%;
+    transform: rotate(80deg);
+  }
+
+  .buttonSpace {
+    top: -20%;
+    right: 38px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-self: center;
+    height: 300px;
+    width: 20rem;
+    z-index: 10;
+  }
+
+  .leftButtons {
+    position: relative;
+    left: 3rem;
+    width: 4.7rem;
+    height: 2.4rem;
+  }
+
+  #copy {
+    position: relative;
+    left: 3rem;
+    width: 10rem;
+    right: 1.87rem;
+  }
+
+  .scroll {
+    background-color: #202124;
+  }
+}
