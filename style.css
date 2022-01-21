@@ -7,10 +7,14 @@
 
 html,
 body {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+
   margin: 0;
   scroll-behavior: smooth;
+  background-color: #202124;
+}
+
+@media (max-width: 1700px) {
 }
 
 :target {
@@ -28,18 +32,17 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
 }
 
 .top {
   display: flex;
   flex-direction: row;
   /* flex-grow: 1; */
-  background-color: #00a388;
+  background-color: #30ffdd;
 
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-bottom-color: #8ab0ab;
+  border-bottom-color: #ffffff;
   flex-basis: 80px;
 }
 
@@ -59,8 +62,10 @@ body {
 
 .middle {
   /* flex-grow: 10; */
-  flex-direction: column;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*align-items: flex-start;*/
   height: 900px;
   background-color: #202124;
 }
@@ -73,21 +78,6 @@ body {
 
   width: 400px;
   height: 200px;
-  left: 10%;
-  top: 6%;
-  /*animation: floatAnimate 3s ease-in-out forwards infinite;*/
-}
-
-@keyframes floatAnimate {
-  0% {
-    margin-top: 0px;
-  }
-  50% {
-    margin-top: -30px;
-  }
-  100% {
-    margin-top: 0px;
-  }
 }
 
 .titlesFormat {
@@ -102,22 +92,46 @@ body {
 }
 
 h1 {
+  position: relative;
   font-size: 60px;
   margin-bottom: 0;
+}
+
+#underline {
+  position: absolute;
+  display: none;
+
+  left: 77%;
+  top: 10%;
+  font-size: 60px;
+  color: white;
+  animation: blink 0.5s infinite linear;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 h2 {
   position: relative;
   top: 2px;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .mainContent {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
 
-  top: 40%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -146,17 +160,17 @@ h2 {
 
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  color: white;
-  background-color: #30ffdd; /*00a388*/
-  border-color: white;
-  border-style: solid;
-  border-width: 1px;
+  color: #202124;
+  background-color: #30ffdd; /*sobre tom escuro:141310*/
 
   width: 300px;
   height: 300px;
   padding: 10px;
 
-  border-radius: 10px;
+  border-color: #d5e2eb;
+  border-style: solid;
+  border-width: 1.5px;
+  border-radius: 5px;
   border-style: hidden;
   outline: none;
 
@@ -234,8 +248,8 @@ h2 {
   width: 10rem;
   height: 2.4rem;
 
-  color: white;
-  background-color: #00a388;
+  color: #202124;
+  background-color: #d5e2eb;
 
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -251,8 +265,8 @@ h2 {
   width: 100px;
   height: 2.3rem;
 
-  color: white;
-  background-color: #00a388;
+  color: #202124;
+  background-color: #d5e2eb; /*30ffdd*/
 
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -300,4 +314,6 @@ a {
 .scroll {
   height: 300px;
   bottom: 300px;
+  background-color: #e2e4f6;
+  clip-path: polygon(28% 30%, 60% 6%, 100% 30%, 100% 98%, 0 100%, 0 0);
 }

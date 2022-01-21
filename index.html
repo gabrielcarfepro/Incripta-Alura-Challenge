@@ -29,15 +29,11 @@
             d="M160.34 14.652v12.82M153.846 20.978h12.82"
           />
         </svg>
-        <img
-          src="img/desenvolvendo.svg"
-          class="imagem"
-          alt="Imagem informando que o site está em desenvolvimento"
-        />
       </div>
       <div class="middle">
         <div class="titlesContainer">
-          <h1 class="titlesFormat">!ncripta</h1>
+          <h1 id="titulo" class="titlesFormat">!ncripta</h1>
+          <span id="underline">_</span>
           <h2 class="titlesFormat">
             Uma aplicação web para criptografia de textos
           </h2>
@@ -130,7 +126,7 @@
               type="button"
               class="leftButtons"
               value="Descriptografar"
-              onclick="decript()"
+              onclick="startDecript()"
             />
             <input
               type="button"

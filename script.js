@@ -1,5 +1,17 @@
 function startCript() {
-  animar()
+  animar('cript')
+}
+
+function startDecript() {
+  let texto = document.querySelector('#texto')
+  let wordsKeys = ['enter', 'imes', 'ai', 'ober', 'ufat']
+  let textoValor = texto.value
+  let verify = wordsKeys.some(e => textoValor.includes(e))
+  if (!verify) {
+    alert('O texto não está codificado!')
+  } else {
+    animar('decript')
+  }
 }
 
 function cript() {
@@ -19,19 +31,13 @@ function decript() {
   let texto = document.querySelector('#texto')
   let resultado = document.querySelector('#resultado')
   let textoValor = texto.value
-  let wordsKeys = ['enter', 'imes', 'ai', 'ober', 'ufat']
-  let verify = wordsKeys.some(e => textoValor.includes(e))
-  if (!verify) {
-    alert('O texto não está codificado!')
-  } else {
-    let res = textoValor
-      .replace(/enter/gi, 'e')
-      .replace(/imes/gi, 'i')
-      .replace(/ai/gi, 'a')
-      .replace(/ober/gi, 'o')
-      .replace(/ufat/gi, 'u')
-    resultado.value = res
-  }
+  let res = textoValor
+    .replace(/enter/gi, 'e')
+    .replace(/imes/gi, 'i')
+    .replace(/ai/gi, 'a')
+    .replace(/ober/gi, 'o')
+    .replace(/ufat/gi, 'u')
+  resultado.value = res
 }
 
 function copy() {
@@ -57,4 +63,30 @@ function getGitHubAPI() {
     })
 }
 
-getGitHubAPI()
+getGitHubAPI()(
+  // ANIMAÇÃO DO TITULO
+
+  (async function IncriptaAnimation() {
+    let animaEmbaralhar = setInterval(() => {
+      embaralhar()
+    }, 50)
+    setTimeout(() => {
+      clearInterval(animaEmbaralhar)
+      document.querySelector('#titulo').textContent = '!ncripta'
+      document.querySelector('#underline').style.display = 'block'
+    }, 1000)
+  })()
+)
+
+function embaralhar() {
+  let caracteres = ['a', 'b', '¢', '!', '#', '%', '+', '@', '1', '§', '¨']
+  let titulo = document.querySelector('#titulo')
+  let tituloOriginal = '!ncripta'
+  let arrayTitulo = tituloOriginal.split('')
+  let random = parseInt(Math.random() * (1 + caracteres.length) - 1)
+  let random2 = parseInt(Math.random() * (1 + arrayTitulo.length) - 1)
+  titulo.textContent = tituloOriginal.replace(
+    arrayTitulo[random2],
+    caracteres[random]
+  )
+}
