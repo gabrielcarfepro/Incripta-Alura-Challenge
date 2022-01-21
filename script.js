@@ -38,16 +38,7 @@ function copy() {
   let copyText = document.querySelector('#resultado')
   copyText.select()
   document.execCommand('copy')
-}
-
-function transformate(input, output) {
-  let valorDeSaida = input
-    .replace(/e/gi, 'enter')
-    .replace(/i/gi, 'imes')
-    .replace(/a/gi, 'ai')
-    .replace(/o/gi, 'ober')
-    .replace(/u/gi, 'ufat')
-  textforcopy.innerHTML = res
+  copyText.value = ''
 }
 
 // CONSUMINDO API DO GITHUB

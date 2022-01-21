@@ -10,6 +10,18 @@ body {
   height: 100vh;
   width: 100vw;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 0.8em;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
 }
 
 .container {
@@ -20,19 +32,36 @@ body {
 }
 
 .top {
-  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  /* flex-grow: 1; */
   background-color: #00a388;
 
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #8ab0ab;
+  flex-basis: 80px;
+}
+
+.logo-Oracle-Alura {
+  position: relative;
+  width: 350px;
+  height: 35px;
+  top: 16px;
+  left: 30px;
+}
+
+.imagem {
+  position: relative;
+  width: 300px;
+  height: 75px;
 }
 
 .middle {
-  flex-grow: 10;
+  /* flex-grow: 10; */
   flex-direction: column;
   align-items: flex-start;
-
+  height: 900px;
   background-color: #202124;
 }
 
@@ -46,7 +75,7 @@ body {
   height: 200px;
   left: 10%;
   top: 6%;
-  animation: floatAnimate 3s ease-in-out forwards infinite;
+  /*animation: floatAnimate 3s ease-in-out forwards infinite;*/
 }
 
 @keyframes floatAnimate {
@@ -84,11 +113,11 @@ h2 {
 }
 
 .mainContent {
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
 
-  top: 63%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -99,7 +128,6 @@ h2 {
 }
 
 .textSpace {
-  position: relative;
   display: flex;
 
   justify-content: space-between;
@@ -245,7 +273,8 @@ h2 {
 .footer {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  flex-basis: 100px;
+  /* flex-grow: 2; */
   background-color: #202124; /*#03120e #3e505b*/
   /*background-color: #3064ff; /*#03120e #3e505b*/
 }
@@ -266,4 +295,9 @@ h2 {
 a {
   color: white;
   text-decoration: none;
+}
+
+.scroll {
+  height: 300px;
+  bottom: 300px;
 }
