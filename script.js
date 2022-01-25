@@ -19,11 +19,11 @@ function cript() {
   let resultado = document.querySelector('#resultado')
   let textoValor = texto.value
   let textoResultante = textoValor
-    .replace(/i/gi, 'imes')
-    .replace(/e/gi, 'enter')
-    .replace(/a/gi, 'ai')
-    .replace(/o/gi, 'ober')
-    .replace(/u/gi, 'ufat')
+    .replace(/[i\í]/gi, 'imes')
+    .replace(/[e\é\ê]/gi, 'enter')
+    .replace(/[a\á\â\ã]/gi, 'ai')
+    .replace(/[o\ó\ô]/gi, 'ober')
+    .replace(/[u\ú]/gi, 'ufat')
   resultado.value = textoResultante
 }
 
