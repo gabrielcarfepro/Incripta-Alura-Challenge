@@ -13,11 +13,74 @@ body {
   background-color: #202124;
 }
 
-@media (max-width: 1700px) {
-}
-
 :target {
   scroll-margin-top: 0.8em;
+}
+
+.pop-up-back {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: #000000e3;
+  z-index: 1;
+}
+
+.pop-up-box {
+  position: relative;
+  display: inline;
+
+  width: 600px;
+  height: 20rem;
+
+  color: white;
+  background-color: #ffffff;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 5px;
+
+  text-align: center;
+}
+
+.warning-icon {
+  width: 150px;
+  height: 150px;
+}
+
+.warning {
+  position: relative;
+  padding-top: 10px;
+  color: #202124;
+}
+
+.warning-button {
+  position: fixed;
+  bottom: 10px;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
+  height: 2.4rem;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+
+  color: #ffffff;
+  background-color: #202124;
+
+  border-radius: 5px;
+  border-style: hidden;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.warning-button:hover {
+  color: #202124;
+  background-color: #30ffdd;
 }
 
 .main {
@@ -64,7 +127,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /*align-items: flex-start;*/
+  /*align-items: flex-start; 30ffdd*/
   height: 900px;
   background-color: #202124;
 }
@@ -140,6 +203,14 @@ h2 {
   /*background-color: lightcoral;*/
 }
 
+.text-info{
+  position: absolute;
+  left: 30px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  display: none;
+}
+
 .textSpace {
   display: flex;
 
@@ -149,7 +220,7 @@ h2 {
   padding: 30px;
 
   width: 62.5rem;
-  height: 300px;
+  height: 18.75rem;
   /*background-color: antiquewhite;*/
 }
 
@@ -160,16 +231,14 @@ h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: #202124;
-  background-color: #30ffdd; /*sobre tom escuro:141310*/
+  background-color: #30ffdd;
+  caret-color: #202124;
 
   width: 300px;
   height: 300px;
   padding: 10px;
 
   border-color: #d5e2eb;
-  border-style: solid;
-  border-width: 1.5px;
-  border-radius: 5px;
   border-style: hidden;
   outline: none;
 
@@ -225,8 +294,8 @@ h2 {
 
 .leftButtons {
   position: relative;
-  left: 1.8rem;
-  width: 10rem;
+  left: 1.89rem;
+  width: 9.85rem;
   height: 2.4rem;
 
   color: #202124;
@@ -236,27 +305,33 @@ h2 {
   font-weight: bold;
   font-size: 20px;
 
-  border-radius: 6px;
   border-style: hidden;
 
   cursor: pointer;
 }
 
+.leftButtons:hover {
+  background-color: #30ffdd;
+}
+
 .buttons {
   width: 100px;
-  height: 2.3rem;
+  height: 2.4rem;
 
   color: #202124;
-  background-color: #d5e2eb; /*30ffdd*/
+  background-color: #d5e2eb;
 
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 26px;
 
-  border-radius: 6px;
   border-style: hidden;
 
   cursor: pointer;
+}
+
+.buttons:hover {
+  background-color: #30ffdd;
 }
 
 #copy {
@@ -274,27 +349,180 @@ h2 {
   /*background-color: #3064ff; /*#03120e #3e505b*/
 }
 
-.dev {
+.infos {
   display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 10px;
-
-  align-self: center;
-  text-align: center;
-  top: 50%;
-
-  color: #202124;
+  height: 400px;
+  bottom: 300px;
+  background: #d5e2eb;
+  clip-path: polygon(18% 10%, 60% 0%, 100% 15%, 100% 98%, 0 100%, 0 0);
 }
 
-a {
+.one-infos {
+  position: relative;
+  top: 20%;
+  left: 10%;
+  width: 450px;
+  height: 250px;
+  background-color: white;
+
+  border-style: solid;
+  border-width: 5px;
+  border-color: #30ffdd;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.infos-title {
+  text-align: center;
   color: #202124;
+  font-family: 'Roboto', sans-serif;
+}
+
+.info-text {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  color: #202124;
+  font-family: 'Roboto', sans-serif;
+}
+
+.info-new-class {
+  position: relative;
+  top: 75px;
+  left: 3%;
+  color: #202124;
+  font-family: 'Roboto', sans-serif;
+}
+
+.info-link-more {
+  position: relative;
+  top: 75px;
+  left: 8%;
+  padding: 18px 40px 16px;
+
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  background-color: #202124;
   text-decoration: none;
 }
 
-.scroll {
-  height: 300px;
-  bottom: 300px;
-  background-color: #e2e4f6;
-  clip-path: polygon(28% 30%, 60% 6%, 100% 30%, 100% 98%, 0 100%, 0 0);
+.info-link-more:hover {
+  color: #202124;
+  background-color: #30ffdd;
+}
+
+.dev-infos {
+  position: relative;
+  left: 36%;
+  top: 20%;
+  width: 450px;
+  height: 250px;
+  background-color: #202124;
+
+  border-style: solid;
+  border-width: 5px;
+  border-color: #30ffdd;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+
+.dev-infos-title {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dev-info-box {
+  position: relative;
+  left: 140px;
+  bottom: 41%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 300px;
+
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: white;
+  padding-bottom: 5px;
+}
+
+#devPhoto {
+  position: relative;
+  left: 3%;
+  top: 3%;
+
+  width: 100px;
+  clip-path: circle(50% at 50% 50%);
+
+  border-style: solid;
+  border-width: 5px;
+  border-color: #30ffdd;
+  border-radius: 50%;
+}
+
+#devName {
+  position: relative;
+  text-align: center;
+  color: #30ffdd;
+  font-family: 'Roboto', sans-serif;
+}
+
+#userBio {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+
+  color: #202124;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+#githubUserName {
+  position: relative;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #202124;
+  background-color: white;
+  left: 35%;
+  bottom: 50px;
+  text-decoration: none;
+}
+
+#githubUserName:hover {
+  color: #202124;
+  background-color: #30ffdd;
+}
+
+#linkedin {
+  position: relative;
+  padding: 10px;
+  padding-left: 24.7px;
+  padding-right: 24.7px;
+  color: #202124;
+  background-color: white;
+  left: 43%;
+  bottom: 50px;
+  text-decoration: none;
+}
+
+#linkedin:hover {
+  color: #202124;
+  background-color: #30ffdd;
+}
+
+@media (max-width: 1700px) {
+  .one-infos {
+    left: 8%;
+  }
+  
+  .dev-infos {
+    left: 30%;
+  }
+
+  .logo-Oracle-Alura {
+    top: 10px;
+  }
 }

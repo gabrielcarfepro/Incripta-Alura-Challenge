@@ -1,6 +1,8 @@
 @media (max-width: 500px) {
   .mainContent {
     align-items: stretch;
+    /*width: 400px;
+    height: 1060px;*/
   }
 
   .textSpace {

@@ -1,0 +1,28 @@
+.text-info-show{
+  display: block;
+  animation: fade 2s;
+}
+
+.text-info-out{
+  display: block;
+  animation: fadeout 1s forwards;
+}
+
+@keyframes fade {
+  0%{
+    color: transparent;
+  }
+  100%{
+    color: white;
+  }
+
+}
+
+@keyframes fadeout {
+  0%{
+    color: white;
+  }
+  100%{
+    color: transparent;
+  }
+}
