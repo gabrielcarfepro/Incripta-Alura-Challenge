@@ -45,14 +45,9 @@ body {
   text-align: center;
 }
 
-.warning-icon {
-  width: 150px;
-  height: 150px;
-}
-
 .warning {
   position: relative;
-  padding-top: 10px;
+  top: 160px;
   color: #202124;
 }
 

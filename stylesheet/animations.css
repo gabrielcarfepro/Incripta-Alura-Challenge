@@ -1,3 +1,5 @@
+/* ANIMAÇÃO TEXTO DE INSTRUÇÃO DE USO NA CAIXA DE TEXTO */
+
 .text-info-show{
   display: block;
   animation: fade 2s;
@@ -24,5 +26,149 @@
   }
   100%{
     color: transparent;
+  }
+}
+
+/* ANIMAÇÃO POP-UP DE ERRO */
+
+.error-icon{
+  position: relative;
+  right: 75px;
+}
+
+#triangle{
+  width: 150px;
+  position: absolute;
+  animation: animacao-erro 2.68s infinite ease-in-out;
+  transform: scale(0.9);
+  enable-background: new 0 0 430 430;
+}
+
+#exclamation{
+  width: 150px;
+  position: absolute;
+  animation: exclamacao 2.68s infinite ease;
+  transform: scale(0.9);
+  enable-background: new 0 0 430 430;
+}
+
+@keyframes exclamacao {
+  0%{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  20%{
+    -webkit-transform: scale(1.8) rotate(24deg) translate(0, -5%);
+    transform: scale(1.8) rotate(24deg) translate(0, -5%);
+  }
+  30%{
+    -webkit-transform: scale(0.9) translate(0, -5%);
+    transform: scale(0.9) translate(0, -5%);
+  }
+  50%{
+    -webkit-transform: scale(1.8) rotate(-26deg) translate(0, -5%);
+    transform: scale(1.8) rotate(-26deg) translate(0, -5%);
+  }
+  65%{
+    -webkit-transform: scale(0.75) rotate(15deg);
+    transform: scale(0.75) rotate(15deg);
+  }
+  85%{
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  95%{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes animacao-erro {
+  0%{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  20%{
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  30%{
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  50%{
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  65%{
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+  }
+  85%{
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  95%{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.st0{fill:#30ffdd;}
+
+.st1 {
+  fill:#202124;
+}
+
+.st2 {
+  fill:none;
+  stroke:#202124;
+  stroke-width:12;
+  stroke-linecap: round;
+  stroke-linejoin:round;
+  stroke-miterlimit:10;
+}
+
+.st3{
+  fill:#30ffdd;
+}
+
+#exclamation-white-bar{
+  transform: translate(10.4%, 15.1%);
+  stroke: white;
+  stroke-width:1;
+  stroke-miterlimit:10;
+  animation: line-adjust 2.68s infinite;
+}
+
+#exclamation-white-circle{
+  transform: translate(10.2%, 15.1%);
+  stroke: white;
+  stroke-width:1;
+  stroke-miterlimit:10;
+  animation: line-adjust 2.68s infinite;
+}
+
+@keyframes line-adjust{
+  0%{
+    stroke-width:3;
+  }
+  20%{
+    stroke-width:12;
+  }
+  30%{
+    stroke-width:3;
+  }
+  50%{
+    stroke-width:12;
+  }
+  65%{
+    stroke-width:3;
+  }
+  85%{
+    stroke-width:10;
+  }
+  95%{
+    stroke-width:3;
   }
 }
