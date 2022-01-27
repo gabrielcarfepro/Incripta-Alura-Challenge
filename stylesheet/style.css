@@ -266,16 +266,16 @@ h2 {
   stroke: #202124;
   stroke-width: 2px;
   stroke-dashoffset: 10;
-  stroke-dasharray: 12;
-  animation: svganimation 5s linear forwards;
+  stroke-dasharray: 6;/*12*/
+  animation: animation-criptografando 5s linear forwards;
 }
 
-@keyframes svganimation {
+@keyframes animation-criptografando {
   0% {
     stroke-dashoffset: 0;
   }
   100% {
-    stroke-dashoffset: 800;
+    stroke-dashoffset: 1000;
   }
 }
 
@@ -333,6 +333,23 @@ h2 {
   position: fixed;
   width: 20rem;
   right: 1.87rem;
+}
+
+.msgCopiado{
+  position: absolute;
+  width: 100px;
+
+  left: 826px;
+  bottom: 10px;
+
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  z-index: 2;
+  display: none;
+
+  text-shadow: 1px 1px 2px #202124a6;
 }
 
 .footer {
